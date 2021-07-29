@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- PWA -->
+    <meta name="theme-color" content="#02394B">
+    <link rel="shortcut icon" href="admin/img/logo.svg">
+    <link rel="manifest" href="admin/json/manifest.json">
+    <link rel="apple-touch-icon" href="admin/img/logo.svg">
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Projeto Habitacional de Segurança Pública</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="image/logo-branca-01.png" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/index.css" rel="stylesheet" />
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+    <!-- Mascaras -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Load Bootstrap-select Lib -->
+    <link rel="stylesheet" href="./admin/lib/bootstrap-select/css/bootstrap-select.min.css">
+    <script src="./admin/lib/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="./admin/lib/bootstrap-select/js/i18n/defaults-pt_BR.min.js"></script>
+
+    <!-- Compress de Imagens -->
+    <script src="./admin/lib/compress.js"></script>
+
+    <!-- Validador CPF -->
+    <script src="./admin/lib/cpf.js"></script>
+
+    <!-- reCaptcha -->
+    <script src="https://www.google.com/recaptcha/api.js?hl=pt-BR" async defer></script>
+
+</head>
+
+<body id="page-top">
+    <div id="side-helper" class="side-helper"></div>
+    <div id="content">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="mainNav">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Alterna navegação">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            <div class="container">
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav float-left">
+                        <li class="nav-item mx-0 mx-lg-1 mb-2"><button class="btn btn-primary btn-lg" id="inscricao">Formulário</button></li>
+                        <li class="nav-item mx-0 mx-lg-1"><button class="btn btn-primary btn-lg" type="button" id="duvidas">Dúvidas sobre o curso</button></li>
+                    </ul>
+                </div>
+                <img data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Alterna navegação" src="image/logo.png" alt="logo" height="100" width="100">
+            </div>
+        </nav>
+
+        <!-- Masthead-->
+        <div class="bg-dark">
+            <div id="invitation" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="image/carousel/banner1.png" alt="Primeiro Slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="nav-title text-dark text-uppercase">
+                                Projeto Desenvolvimento Web
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <img class="d-block w-100" src="image/carousel/banner2.png" alt="Segundo Slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="nav-title text-dark text-uppercase">
+                                Projeto Desenvolvimento Web
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <img class="d-block w-100" src="image/carousel/banner3.png" alt="Terceiro Slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="nav-title text-dark text-uppercase">
+                                Projeto Desenvolvimento Web
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <img class="d-block w-100" src="image/carousel/banner4.png" alt="Quarto Slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="nav-title text-dark text-uppercase">
+                                Projeto Desenvolvimento Web
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <img class="d-block w-100" src="image/carousel/banner5.png" alt="Quinto Slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="nav-title text-dark text-uppercase">
+                                Projeto Desenvolvimento Web
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <img class="d-block w-100" src="image/carousel/banner6.png" alt="Sexto Slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="nav-title text-dark text-uppercase">
+                                Projeto Desenvolvimento Web
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <img class="d-block w-100" src="image/carousel/banner7.png" alt="Setimo Slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="nav-title text-dark text-uppercase">
+                                Projeto Desenvolvimento Web
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <img class="d-block w-100" src="image/carousel/banner8.png" alt="Oitavo Slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="nav-title text-dark text-uppercase">
+                                Projeto Desenvolvimento Web
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="page-section bg-light" id="o-que-e" style="opacity: 90%;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        <h1 class="text-title text-center text-uppercase text-dark mb-0">O que é?</h1>
+                        <div class="divider-custom">
+                            <div class="divider-custom-line bg-dark"></div>
+                            <div class="divider-custom-icon"><i class="fas fa-star" style="color: #343a40"></i></div>
+                            <div class="divider-custom-line bg-dark"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-8 justify-content-center">
+                        <div class="mx-auto">
+                            <p class="text-paragraph">
+                                Lorem ipsum litora quam posuere taciti inceptos tempus, donec aptent suscipit morbi tincidunt nam dapibus vitae, suscipit sem viverra tempus justo sem. nisi leo pulvinar odio feugiat tincidunt sapien quisque bibendum est hendrerit, ipsum pellentesque habitasse quis pharetra sociosqu magna felis habitasse, purus tempus augue nostra arcu aliquet maecenas inceptos ac. 
+                            </p>
+                            <button class="btn btn-primary btn-sm mx-auto" id="1-open">Ler mais</button>
+                            <div id="1-continue">
+                                <p class="text-paragraph">
+                                    Lorem ipsum litora quam posuere taciti inceptos tempus, donec aptent suscipit morbi tincidunt nam dapibus vitae, suscipit sem viverra tempus justo sem. nisi leo pulvinar odio feugiat tincidunt sapien quisque bibendum est hendrerit, ipsum pellentesque habitasse quis pharetra sociosqu magna felis habitasse, purus tempus augue nostra arcu aliquet maecenas inceptos ac. 
+                                </p>
+                                <p class="text-paragraph">
+                                    Lorem ipsum litora quam posuere taciti inceptos tempus, donec aptent suscipit morbi tincidunt nam dapibus vitae, suscipit sem viverra tempus justo sem. nisi leo pulvinar odio feugiat tincidunt sapien quisque bibendum est hendrerit, ipsum pellentesque habitasse quis pharetra sociosqu magna felis habitasse, purus tempus augue nostra arcu aliquet maecenas inceptos ac. </p>
+                                <button class="btn btn-danger btn-sm mx-auto float-right" id="1-close"><i class="fas fa-window-close"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section bg-danger" id="finalidade" style="opacity: 90%;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        <h1 class="text-title text-center text-uppercase text-light mb-0">Qual a finalidade?</h1>
+                        <div class="divider-custom">
+                            <div class="divider-custom-line bg-light"></div>
+                            <div class="divider-custom-icon"><i class="fas fa-star" style="color: white"></i></div>
+                            <div class="divider-custom-line bg-light"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="mx-auto">
+                            <p class="text-paragraph text-light">
+                                Lorem ipsum litora quam posuere taciti inceptos tempus, donec aptent suscipit morbi tincidunt nam dapibus vitae, suscipit sem viverra tempus justo sem. nisi leo pulvinar odio feugiat tincidunt sapien quisque bibendum est hendrerit, ipsum pellentesque habitasse quis pharetra sociosqu magna felis habitasse, purus tempus augue nostra arcu aliquet maecenas inceptos ac. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section bg-primary" id="quem-pode-se-candidatar" style="opacity: 90%;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        <h1 class="text-title text-center text-uppercase text-light mb-0">Lucros mensais?</h1>
+                        <div class="divider-custom">
+                            <div class="divider-custom-line bg-light"></div>
+                            <div class="divider-custom-icon"><i class="fas fa-star" style="color: white"></i></div>
+                            <div class="divider-custom-line bg-light"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="mx-auto">
+                            <p class="text-paragraph text-light">
+                                Lorem ipsum litora quam posuere taciti inceptos tempus, donec aptent suscipit morbi tincidunt nam dapibus vitae, suscipit sem viverra tempus justo sem. nisi leo pulvinar odio feugiat tincidunt sapien quisque bibendum est hendrerit, ipsum pellentesque habitasse quis pharetra sociosqu magna felis habitasse, purus tempus augue nostra arcu aliquet maecenas inceptos ac. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section bg-light" id="requisitos-necessarios" style="opacity: 90%;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        <h1 class="text-title text-center text-uppercase text-dark mb-0">Requisitos?</h1>
+                        <div class="divider-custom">
+                            <div class="divider-custom-line bg-dark"></div>
+                            <div class="divider-custom-icon"><i class="fas fa-star" style="color: #343a40"></i></div>
+                            <div class="divider-custom-line bg-dark"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="mx-auto">
+                            <p class="text-paragraph">
+                                - 	Lorem ipsum litora quam posuere taciti inceptos tempus, donec aptent suscipit morbi tincidunt nam dapibus vitae
+                            </p>
+                            <button class="btn btn-primary btn-sm mx-auto" id="2-open">Ler mais</button>
+                            <div id="2-continue">
+                                <p class="text-paragraph">
+                                    - Lorem ipsum litora quam posuere taciti inceptos tempus, donec aptent suscipit morbi tincidunt nam dapibus vitae</p>
+                                <p class="text-paragraph">
+                                    - Lorem ipsum litora quam posuere taciti inceptos tempus, donec aptent suscipit morbi tincidunt nam dapibus vitae</p>
+                                <button class="btn btn-danger btn-sm mx-auto float-right" id="2-close"><i class="fas fa-window-close"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section bg-danger" id="criterios-priorizacao" style="opacity: 90%;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        <h1 class="text-title text-center text-uppercase text-light mb-0">Quais são os critérios?</h1>
+                        <div class="divider-custom">
+                            <div class="divider-custom-line bg-light"></div>
+                            <div class="divider-custom-icon"><i class="fas fa-star" style="color: white"></i></div>
+                            <div class="divider-custom-line bg-light"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="container">
+                            <div class="mx-auto">
+                                <p class="text-paragraph text-light">
+                                    Lorem ipsum litora quam posuere taciti inceptos tempus, donec aptent suscipit morbi tincidunt nam dapibus vitae   </p>
+                                <button class="btn btn-primary btn-sm mx-auto" id="3-open">Ler mais</button>
+                                <div id="3-continue">
+                                    <p class="text-paragraph text-light">
+                                        Lorem ipsum litora quam posuere taciti inceptos tempus, donec aptent suscipit morbi tincidunt nam dapibus vitae </p>
+                                    <p class="text-paragraph text-light">
+                                        Lorem ipsum litora quam posuere taciti inceptos tempus, donec aptent suscipit morbi tincidunt nam dapibus vitae </p>
+                                    <button class="btn btn-danger btn-sm mx-auto float-right" id="3-close"><i class="fas fa-window-close"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section bg-primary" id="etapas" style="opacity: 90%;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        <h1 class="text-title text-center text-uppercase text-light mb-0">Etapas</h1>
+                        <div class="divider-custom">
+                            <div class="divider-custom-line bg-light"></div>
+                            <div class="divider-custom-icon"><i class="fas fa-star" style="color: white"></i></div>
+                            <div class="divider-custom-line bg-light"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="mx-auto">
+                            <p class="text-paragraph text-light">
+                                Lorem ipsum litora quam posuere taciti inceptos tempus, donec aptent suscipit morbi tincidunt nam dapibus vitae </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                <div class="modal-content">
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer-->
+        <footer class="footer text-center">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Location-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4>Curso PICPC 2021 <br></h4>
+                        <p class="lead mb-0 text-center">
+                            R. brilha brilha estrelinha, 305. Belém - PA <br> (91) 99999-9999
+                        </p>
+                    </div>
+                    <!-- Footer Social Icons-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Siga-nos</h4>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/picpc/" target="_blank"><i
+                                class="fab fa-fw fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="http://www.twitter.com/picpc/" target="_blank"><i
+                                class="fab fa-fw fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="http://www.instagram.com/picpc/" target="_blank"><i
+                                class="fab fa-fw fa-instagram"></i></a>
+                    </div>
+                    <!-- Footer About Text-->
+                    <div class="col-lg-4">
+                        <h4>Desenvolvimento Web (PICPC)</h4>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Copyright Section-->
+        <div class="copyright py-4 text-center text-white">
+            <div class="container"><small>Copyright © PICPC/ 2021</small></div>
+        </div>
+        <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
+        <div class="scroll-to-top d-lg-none position-fixed">
+            <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i
+                    class="fa fa-chevron-up"></i></a>
+        </div>
+    </div>
+
+    <!-- Core theme JS-->
+    <script src="js/index.js"></script>
+</body>
+
+
+</html>
