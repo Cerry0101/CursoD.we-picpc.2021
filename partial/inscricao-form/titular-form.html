@@ -1,0 +1,144 @@
+<form id="titular-form">
+    <input hidden id='idtitular' name='idtitular'>
+    <div class="row">
+        <div class="col-sm-6">
+            <label for="cpf">Qual o seu CPF?</label>
+            <input type="text" class="form-control" id="cpf" name="cpf" required>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <label for="nome">Qual é o seu nome completo?</label>
+            <input type="text" class="form-control" name="nome" id="nome" maxlength="100" required>
+        </div>
+        <div class="col-sm-6">
+            <label for="dt_nascimento">Data de Nascimento</label>
+            <input type="date" class="form-control" name="dt_nascimento" id="dt_nascimento" required>
+        </div>
+    </div>
+    <div class="row mt-2s">
+        <div class="col-sm-6">
+            <label for="sexo">Sexo</label>
+            <select class='form-control' id="sexo" name='sexo' data-live-search='true' data-actions-box='true' required>
+                <option value="m">Masculino</option>
+                <option value="f">Feminino</option>
+            </select>
+        </div>
+        <div class="col-sm-6">
+            <label for="naturalidade">Qual sua naturalidade?</label>
+            <input type="text" class="form-control" name="naturalidade" id="naturalidade" maxlength="100" required>
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-sm-6">
+            <label for="escolaridade">Escolaridade</label>
+            <select class='form-control' id="escolaridade" name='escolaridade' data-live-search='true' data-actions-box='true' required>
+                <option>Fundamental - Incompleto</option>
+                <option>Fundamental - Completo</option>
+                <option>Médio - Incompleto</option>
+                <option>Médio - Completo</option>
+                <option>Superior - Incompleto</option>
+                <option>Superior - Completo</option>
+                <option>Pós-graduação (Lato senso) - Incompleto</option>
+                <option>Pós-graduação (Lato senso) - Completo </option>
+            </select>
+        </div>
+        <div class="col-sm-6">
+            <label for="estado_civil">Estado Civil</label>
+            <select class='form-control' id="estado_civil" name='estado_civil' data-live-search='true' data-actions-box='true' required>
+                <option>Solteiro</option>
+                <option>Casado</option>
+                <option>União estável</option>
+                <option>Divorciado</option>
+                <option>Viúvo</option>
+            </select>
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-sm-6">
+            <label for="email">Qual o seu email?</label>
+            <input type="email" class="form-control" name="email" id="email" required>
+        </div>
+        <div class="col-sm-6">
+            <label for="contato">Qual o seu contato?</label>
+            <input type="text" class="form-control" name="contato" id="contato" maxlength="15" required>
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-sm-4">
+            <label for="rg">Qual o número do seu RG?</label>
+            <input type="text" class="form-control" name="rg" id="rg" maxlength="15" required>
+        </div>
+        <div class="col-sm-4">
+            <label for="orgao_expedidor">Qual o órgão expedidor?</label>
+            <input type="text" class="form-control" name="orgao_expedidor" id="orgao_expedidor" maxlength="50" required>
+        </div>
+        <div class="col-sm-4">
+            <label for="dt_expedicao">Data de expedição:</label>
+            <input type="date" class="form-control" name="dt_expedicao" id="dt_expedicao" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="upload_foto_rg">Foto de seu RG (ABERTO)</label>
+        <div class="form-file" id="form_foto_rg">
+            <input type="file" id="upload_foto_rg" required>
+        </div>
+        <div id="foto_rg" class="text-center">
+            <img id="preview_foto_rg" class="img-fluid img-thumbnail">
+            <br>
+            <i>clique na imagem para alterá-la</i>
+        </div>
+        <input hidden name='idrg'>
+        <input hidden name='base64_rg'>
+    </div>
+
+    <div class="row mt-2">
+        <div class="col-sm-12">
+            <label for="pcd">É pessoa com deficiencia?</label>
+            <select class='form-control' id="pcd" name='pcd' data-live-search='true' required>
+                <option value="N">Não</option>
+                <option value="S">Sim</option>
+            </select>
+        </div>
+    </div>
+    <div id="div-pcd">
+        <div class="row mt-2">
+            <div class="col-sm-6">
+                <label for="tipo_pcd">Qual o tipo?</label>
+                <select class='form-control' id="tipo_pcd" name='tipo_pcd[]' data-live-search='true' data-actions-box='true'>
+                    <option value="Fisico">Físico</option>
+                    <option value="Visual">Visual</option>
+                    <option value="Auditiva">Auditiva</option>
+                    <option value="Intelectual">Intelectual</option>
+                    <option value="Nanismo">Nanismo</option>
+                    <option value="Autismo">Autismo</option>
+                </select>
+            </div>
+            <div class="col-sm-6">
+                <label for="cid">Qual o seu CID?</label>
+                <input type="text" class="form-control" name="cid" id="cid" maxlength="50">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="upload_foto_laudo">Anexe a foto de seu laudo médico</label>
+            <div class="form-file" id="form_foto_laudo">
+                <input type="file" id="upload_foto_laudo" required>
+            </div>
+            <div id="foto_laudo" class="text-center">
+                <img id="preview_foto_laudo" class="img-fluid img-thumbnail">
+                <br>
+                <i>clique na imagem para alterá-la</i>
+            </div>
+            <input hidden name='idpcd'>
+            <input hidden name='laudo'>
+        </div>
+    </div>
+    <div class="mt-4">
+        <button class="btn btn-success hvr-grow" type="button" id="save-titular-form">
+            <i class="fas fa-save"></i>
+            Gravar
+        </button>
+    </div>
+</form>
+
+<script src='js/inscricao-form/titular-form.js'></script>

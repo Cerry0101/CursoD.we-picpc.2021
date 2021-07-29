@@ -1,0 +1,102 @@
+<form id="titular-profissao-form">
+    <input hidden name='idprofissao' name='titular_id'>
+    <div class="row">
+        <div class="col-sm-6">
+            <label for="orgao">Qual seu órgão?</label>
+            <select class='form-control' id="orgao" name='orgao' data-live-search='true' data-actions-box='true' required>
+                <option value="SEGUP" >Secretaria de Segurança Pública e Defesa Social</option>
+                <option value="SEAP" >Secretaria de Estado de Administração Penitenciária</option>
+                <option value="DETRAN">Departamento de Trânsito do Pará </option>
+                <option value="PM">Polícia Militar do Pará</option>
+                <option value="PC">Polícia Civil do Pará</option>
+                <option value="CPC">Centro de Perícias Científicas Renato Chaves</option>
+                <option value="CBM">Corpo de Bombeiros Militar do Pará</option>
+            </select>
+        </div>
+        <div class="col-sm-6">
+            <label for="ativo">É Servidor Ativo?</label>
+            <select class='form-control' id="ativo" name='ativo' required>
+                <option value="S">Sim</option>
+                <option value="N">Não</option>
+            </select>
+        </div>
+    </div>
+
+    <div id="div-seforativo">
+        <div class="row">
+            <div class="col-sm-6">
+                <label for="unidade_lotacao">Qual sua Unidade de Lotação?</label>
+                <input type="text" class="form-control" name="unidade_lotacao" id="unidade_lotacao" maxlength="100" required>
+            </div>
+            <div class="col-sm-6">
+                <label for="municipio_lotacao">Qual seu Município de atuação?</label>
+                <select class='form-control' id="municipio_lotacao" name='municipio_lotacao' data-live-search='true' required></select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <label for="cargo">Qual seu Cargo e Função?</label>
+                <input type="text" class="form-control" name="cargo" id="cargo" maxlength="100" required>
+            </div>
+            <div class="col-sm-6">
+                <label for="dt_ingresso">Qual sua data de Ingresso</label>
+                <input type="date" class="form-control" name="dt_ingresso" id="dt_ingresso" required>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="invalido">É reformado ou aposentado por acidente, moléstia, ou enfermidade com relação de causa e efeito com o serviço?</label>
+        <select class='form-control' id="invalido" name='invalido' data-live-search='true' required>
+            <option value="N">Não</option>
+            <option value="S">Sim</option>
+        </select>
+    </div>
+    <hr>
+    <div id="div-enfermidade">
+        <div class="form-group">
+            <label for="upload_foto_enfermidade">Anexe o documento comprobatório</label>
+            <div class="form-file" id="form_foto_enfermidade">
+                <input type="file" id="upload_foto_enfermidade" required>
+            </div>
+            <div id="foto_enfermidade"  class="text-center">
+                <img id="preview_foto_enfermidade" class="img-fluid img-thumbnail">
+                <br>
+                <i>clique na imagem para alterá-la</i>
+            </div>
+            <input hidden name='idenfermidade'>
+            <input hidden name='enfermidade'>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <label for="renda_bruta">Qual é o valor do sua renda bruta?</label>
+            <input type="number" step="0.1" class="form-control" name="renda_bruta" id="valor_renda_bruta" required>
+        </div>
+        <div class="col-sm-6">
+            <label for="saldo">Qual é o valor do seu saldo consignável?</label>
+            <input type="number" step="0.1" class="form-control" name="valor_saldo" id="valor_saldo" required>
+        </div>
+    </div>
+    <hr>
+    <div class="form-group">
+        <label for="upload_foto_renda">Anexe uma foto da sua renda bruta </label>
+        <div class="form-file" id="form_foto_renda">
+            <input type="file" id="upload_foto_renda" required>
+        </div>
+        <div id="foto_renda" class="text-center">
+            <img id="preview_foto_renda" class="img-fluid img-thumbnail">
+            <br>
+            <i>clique na imagem para alterá-la</i>
+        </div>
+        <input hidden name='idrenda'>
+        <input hidden name='renda'>
+    </div>
+    
+    <div class="mt-2">
+        <button class="btn btn-success hvr-grow" type="button" id="save-titular-profissao-form">
+            <i class="fas fa-save"></i>
+            Gravar
+        </button>
+    </div>
+</form>
+<script src='js/inscricao-form/profissao-form.js'></script>

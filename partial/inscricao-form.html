@@ -1,0 +1,57 @@
+<div id="alert" class="alert alert-warning shadow">
+    <button type="button" class="close" id="close-alert">&times;</button>
+    <spam id='message'></spam>
+</div>
+
+<style>
+    #alert {
+        position: fixed;
+        top: 50%;
+        left: 25%;
+        width: 50%;
+        z-index:9999; 
+        text-align: center;
+    }
+</style>
+
+<div class="card shadow">
+    <div class="card-header py-3">
+        <h3 class="m-0 font-weight-bold">Formulário de inscrição
+            <button type="button" class="btn btn-primary float-right" data-dismiss="modal" aria-label="Fechar">
+                <i class="fas fa-times"></i>
+            </button>
+        </h3>
+    </div>
+    <div class="card-body">
+
+        <!-- formulario da empresa -->
+        <div class="card shadow mb-4">
+            <a href="#titular" class="d-block card-header py-3" data-toggle="collapse" aria-expanded="false" aria-controls="titular">
+                <h6 class="m-0 font-weight-bold text-primary">1. Dados da Empresa<h6>
+            </a>
+            <div class="collapse show" id="titular">
+                <div class="card-body" id="titular-form-body"></div>
+            </div>
+        </div> 
+
+        <!--  formulario do dados profisisionais da empresa -->
+        <div class="card shadow mb-4">
+            <a href="#titular-profissao" class="d-block card-header py-3" data-toggle="collapse" aria-expanded="false" aria-controls="titular-profissao">
+                <h6 class="m-0 font-weight-bold text-primary">2. Dados Profissionais da Empresa</h6>
+            </a>
+            <div class="collapse" id="titular-profissao">
+                <div class="card-body" id="titular-profissao-form-body"></div>
+            </div>
+        </div>
+        <!--  formulario de localidade-->
+            <div class="card shadow mb-4">
+                <a href="#moradia" class="d-block card-header py-3" data-toggle="collapse"  aria-expanded="false" aria-controls="moradia">
+                    <h6 class="m-0 font-weight-bold text-primary">3. Dados de Localidade</h6>
+                </a>
+                <div class="collapse" id="moradia">
+                    <div class="card-body" id="moradia-form-body"></div>
+                </div>
+            </div>
+    </div>
+</div>
+<script src="js/inscricao-form.js"></script>

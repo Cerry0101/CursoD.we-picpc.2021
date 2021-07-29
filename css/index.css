@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+/*!
+* proprietary CSS by: @MarcosVAdS
+* Search me on GitHub :)
+*/
+
+.nav-title {
+    text-align: center;
+    padding: 10px;
+    font-size: 2rem;
+    line-height: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.text-paragraph {
+    font-size: 1.3rem;
+    line-height: 1.4;
+}
+
+.title-text {
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+.side-helper {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 600;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 130px;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#content {
+    transition: 0.5s;
+}

@@ -1,0 +1,169 @@
+<form id="moradia-form">
+    <input hidden name='idmoradia'>
+    <input hidden name='titular_id'>
+    <div class="row">
+        <div class="col-sm-4">
+            <label for="cep">Qual o CEP do seu endereço?</label>
+            <input type="text" class="form-control" id="cep" name="cep" required>
+        </div>
+        <div class="col-sm-6">
+            <label for="logradouro">Qual o seu Logradouro?</label>
+            <input type="text" class="form-control" name="logradouro" id="logradouro" maxlength="100" required>
+        </div>
+        <div class="col-sm-2">
+            <label for="numero_casa">Nº do seu endereço?</label>
+            <input type="text" class="form-control" name="numero_casa" id="numero_casa" maxlength="15" required>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <label for="bairro">Qual o seu Bairro?</label>
+            <input type="text" class="form-control" name="bairro" id="bairro" maxlength="100" required>
+        </div>
+        <div class="col-sm-6">
+            <label for="municipio">Qual o seu Município</label>
+            <select class='form-control' id="municipio" name='municipio' data-live-search='true' data-actions-box='true' required></select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <label for="situacao">Qual é Situação de moradia?</label>
+            <select class='form-control' id="situacao" name='situacao' data-live-search='true' data-actions-box='true' required>
+                <option value="propria">Própria</option>
+                <option value="Alugada">Alugada</option>
+                <option value="Cedida">Cedida</option>
+                <option value="Familiar">Familiar</option>
+                <option value="Caserna">Caserna</option>
+                <option value="Outros">Outros</option>
+            </select>
+        </div>
+
+        <div class="col-sm-6">
+            <label for="caracteristica_uso">Quais as característica de uso?</label>
+            <select class='form-control' id="caracteristica_uso" name='caracteristica_uso' data-live-search='true' data-actions-box='true' required>
+                <option value="Residencial">Residencial</option>
+                <option value="Comercial">Comercial</option>
+                <option value="Misto">Misto</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <label for="tempo_moradia">Qual tempo de moradia?</label> <br>
+            <select class='form-control' id="tempo_moradia" name='tempo_moradia' data-live-search='true' data-actions-box='true' required>
+                <option value="Menos de 1 ano">Menos de 1 ano</option>
+                <option value="Entre 1 e 3 anos">Entre 1 e 3 anos</option>
+                <option value="Entre 3 e 5 anos">Entre 3 e 5 anos</option>
+                <option value="Entre 5 e 10 anos">Entre 5 e 10 anos</option>
+                <option value="Mais de 10 anos">Mais de 10 anos</option>
+            </select>
+        </div>
+
+        <div class="col-sm-6">
+            <label for="tipo">Qual o tipo de construção? </label>
+            <select class='form-control' id="tipo" name='tipo' data-live-search='true' data-actions-box='true' required>
+                    <option value="Alvenaria">Alvenaria</option>
+                    <option value="Madeira">Madeira</option>
+                    <option value="Misto">Misto</option>
+                    <option value="Outro">Outro</option>
+                </select>
+        </div>
+    </div>
+
+
+
+    <label for="comodo">Comôdos: </label>
+    <div>
+        <div class="row">
+            <div class="col-sm-6">
+                <label for="sala">Quantas Salas?</label>
+                <input type="text" class="form-control" name="sala" id="sala">
+            </div>
+            <div class="col-sm-6">
+                <label for="cozinha">Quantas Cozinhas?</label>
+                <input type="text" class="form-control" name="cozinha" id="cozinha">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <label for="quarto">Quantos Quartos?</label>
+                <input type="text" class="form-control" name="quarto" id="quarto">
+            </div>
+            <div class="col-sm-6">
+                <label for="banheiro_int">Quantos Banheiros Internos?</label>
+                <input type="text" class="form-control" name="banheiro_int" id="banheiro_int">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <label for="banheiro_ext">Quantos Banheiros Externos?</label>
+                <input type="text" class="form-control" name="banheiro_ext" id="banheiro_ext">
+            </div>
+            <div class="col-sm-6">
+                <label for="outros">Outros:</label>
+                <input type="text" class="form-control" name="outros" id="outros">
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="row">
+        <div class="col-sm-6">
+            <label for="condicao">Quais as condições da moradia? </label>
+            <select class='form-control' id="condicao" name='condicao' data-live-search='true' data-actions-box='true' required>
+                <option value="Excelente">Excelente</option>
+                <option value="Boa">Boa</option>
+                <option value="Precaria">Precária</option>
+            </select>
+        </div>
+        <div class="col-sm-6">
+            <label for="terreno">Qual as condiçoes do terreno? </label>
+            <select class='form-control' id="terreno" name='terreno' data-live-search='true' data-actions-box='true' required>
+                <option value="Seco">Seco</option>
+                <option value="Alagado">Alagado</option>
+                <option value="Alagavel">Alagável</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <label for="area_risco">Mora em área de risco?</label>
+            <select class='form-control' id="area_risco" name='area_risco' required>
+                <option value="N">Não</option>
+                <option value="S">Sim</option>
+            </select>
+        </div>
+    </div>
+    <div id="div-laudodfs">
+        <div class="row">
+            <div class="col">
+                <label for="tipo_sinistro">Qual é o tipo de Sinistro?</label>
+                <input type="text" class="form-control" name="tipo_sinistro" id="tipo_sinistro" maxlength="50">
+            </div>
+            <div class="col">
+                <label for="numero_sinistro">Qual é o nº do Boletem de Sinistro?</label>
+                <input type="text" class="form-control" id="numero_sinistro" name="numero_sinistro" maxlength="50">
+            </div>
+            <div class="col"> 
+                <label for="dt_emissao_sinistro">Data de emissão do Boletim de Sinistro:</label>
+                <input type="date" class="form-control" id="dt_emissao_sinistro" name="dt_emissao_sinistro">
+            </div>
+        </div>
+    </div>
+    <div id="div-laudodf" class="form-group">
+        <label for="idlaudo">Possui laudo de defesa civil?</label>
+        <select class='form-control' id="idlaudo" name='idlaudo'>
+            <option value="N">Não</option>
+            <option value="S">Sim</option>
+        </select>
+    </div>
+    <div class="mt-2">
+            <button class="btn btn-success hvr-grow" type="button" id="save-titular-moradia-form">
+                <i class="fas fa-save"></i>
+                Gravar
+            </button>
+    </div>
+    <script src='js/inscricao-form/moradia-form.js'></script>
