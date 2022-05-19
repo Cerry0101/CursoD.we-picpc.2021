@@ -1,8 +1,6 @@
-$('#titular-form-body').load('partial/inscricao-form/titular-form.html')
-//$('#titular-profissao-form-body').load('partial/inscricao-form/profissao-form.html')
-//$('#conjuge-form-body').load('partial/inscricao-form/conjuge-form.html')
-//$('#conjuge-profissao-form-body').load('partial/inscricao-form/profissao-conjuge-form.html')
-//$('#moradia-form-body').load('partial/inscricao-form/moradia-form.html')
+$('#etapa1-form-body').load('partial/inscricao-form/etapa1-form.html')
+$('#etapa2-form-body').load('partial/inscricao-form/etapa2-form.html')
+$('#etapa3-form-body').load('partial/inscricao-form/etapa3-form.html')
 
 $('#alert').hide();
 
@@ -12,7 +10,7 @@ $('#close-alert').on('click', function(){
 
 $.ajax({
     type: 'GET',
-    url: 'admin/api/modalidade/obterModalidades',
+    url: '#',
     error: function(error) {
         console.log(error);
     },

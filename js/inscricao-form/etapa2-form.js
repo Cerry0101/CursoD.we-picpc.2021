@@ -1,15 +1,5 @@
-/*
-$('#orgao').val(null);
-$('#invalido').val(null);
-$('#idorgaoprofissao').val(null);
-$('#ativo').val(null);
-$('#municipio_lotacao').val(null);*/
 $('#foto_enfermidade').hide();
 $('#foto_renda').hide()
-//$('#preview_foto_renda').show();
-//$('#preview_foto_enfermidade').show();
-//$('#div-seforativo').hide();
-
 
 var compress_foto_renda = new Compress(); //instanciando elemento do Compress;
 var upload_foto_renda = document.getElementById('upload_foto_renda'); // aonde eu to pegando a imagem
@@ -71,20 +61,6 @@ $('#preview_foto_enfermidade ').click(() => {
 });
 
 
-var selectMunicipio = $('#municipio_lotacao');
-$.ajax({
-    url: 'admin/json/municipios.json',
-    success: function(result) {
-        var municipio = "";
-        result.forEach(localidade => {
-            if ( municipio !== localidade.municipio.nome ) selectMunicipio.append('<option> ' + localidade.municipio.nome + ' </option> ');
-            municipio = localidade.municipio.nome;
-        });
-        selectMunicipio.val(null)
-        selectMunicipio.selectpicker();
-    }
-});
-
 $('#ativo').change(function() {
     if ($('#ativo').val() == 'S') {
         $('#div-seforativo').show();
@@ -122,60 +98,3 @@ $('input[name="valor_saldo"]').change(function() {
     valor_saldo += parseFloat($(this).val());
     console.log(valor_saldo);
 });
-
-$('#save-titular-profissao-form').click( function() {
-    if ( $('#idtitular').val() ) {
-        var profissao_data = $("#titular-profissao-form").serializeArray();
-        profissao_data.push({ name: "titular_id", value: $("#idtitular").val() });
-        
-        $.ajax({
-            type: 'POST',
-            url: 'admin/api/profissao',
-            data: profissao_data,
-            beforeSend: () => { 
-                $(this).hide();
-            },
-            statusCode:{
-            200: function(response) {
-                $('#save-titular-form').hide()
-                $('#message').text('Salvo com sucesso!');
-                $('#alert').attr('class', 'alert alert-success shadow');
-                $('#conjuge-form-body').html('partial/inscricao-form/conjuge-form.html')
-                $('#conjuge').attr('class', 'show');
-                $('#alert').show();
-            },
-            401: function(response) {
-                $('#save-titular-form').hide()
-                $('#alert-titular').text('Você não possui permissão')
-                $('#alert-titular').toggle()
-            },
-            400: function(response) {
-                $('#message').text('Operação não permitida!');  
-                $('#alert').attr('class', 'alert alert-danger shadow');
-                $('#alert').show();
-            },
-            500: function(response){
-                $('#message').text('Ops, houve um erro interno');
-                $('#alert').attr('class', 'alert alert-danger shadow');
-                $('#alert').show();
-            }
-        },
-            success: (response) => {
-                console.log(response)
-                $('input[name=idprofissao]').val(result.idprofissao);
-                $('input[name=idrenda]').val(result.idrenda);
-                $('input[name=idenfermidade]').val(result.idenfermidade);
-                $('#conjuge-form-body').load('partial/inscricao-form/conjuge-form.html');
-                $(this).show();
-
-            },
-            error: (xhr, textStatus, thrown) => {
-                $('#message').text(textStatus +': '+xhr.status+' '+thrown);
-                $('#alert').attr('class', 'alert alert-danger shadow');
-                $('#alert').show();
-            }                
-        })
-    
-    }
-    return false;
-})
