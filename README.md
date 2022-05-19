@@ -1,2 +1,2 @@
-# DevWeb2021
+# Template Responsivo
 Curso teste para o curso dos calouros de LC UFRA 2021
